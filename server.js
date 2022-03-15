@@ -1,15 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
-// const connectDB = require('./config/db')
+const connectDB = require('./config/dbConfig')
 
 const app = express()
 
-// connectDB()
+connectDB()
 app.use(express.json())
 
-// const feeRouter = require('.router/fees')
-// app.use('/fees', feeRouter)
+// const fecRouter = require('.router/fecRouts')
+// app.use('/fees', fecRouter)
 
 app.listen(8000, () => {
     console.log('Server Running')
